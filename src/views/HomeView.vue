@@ -1,18 +1,32 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="container">
+    <h1>Welcome to Shmordle!</h1>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
 
 export default {
   name: 'HomeView',
+  data() {
+    return {
+      bgColors: require("../assets/bg_colors.json")
+    }
+  },
   components: {
-    HelloWorld
+  },
+  created() {
+    const endPoint = window.location.pathname
+    document.body.style.backgroundColor = this.bgColors[endPoint]
   }
 }
 </script>
+
+<style scoped>
+h1 {
+	font-family: 'Dancing Script', cursive;
+	font-size: 80px;
+	margin-bottom: 30px;
+}
+</style>
