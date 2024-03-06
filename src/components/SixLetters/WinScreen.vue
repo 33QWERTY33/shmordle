@@ -17,11 +17,22 @@
       </div>
     </div>
   </div>
+  <div v-if="defNotFound">
+      <div>
+        <p class="part-of-speech part-of-speech-clr">Definition</p>
+        <p class="definition def-clr">not found</p>
+      </div>
+    </div>
 </template>
 
 <script>
 export default {
   props: ["answer", "def"],
+  data() {
+    return {
+      defNotFound: false  
+    }
+  },
   computed: {
     showDefDisplay() {
       return false ? this.def.title : true;
@@ -30,7 +41,8 @@ export default {
       try {
         return this.def[0].meanings;
       } catch {
-        return [];
+        this.defNotFound = true;
+        return []
       }
     },
   },
@@ -38,16 +50,17 @@ export default {
 </script>
 
 <style scoped>
-.win-header {
-  color: transparent;
-  font-size: 80px;
-  font-weight: 600;
-  background-clip: text;
-  -webkit-background-clip: text;
+.def-clr {color: #482a5c;}
+.word-reveal-clr {color:rgb(60, 92, 93);}
+.part-speech-clr {color: #5b446a;}
+.def-block-clr {
+  background-color: #7dd87d; 
+  border-color: #4c9173;
+}
+.win-header-clr {
   background-image: radial-gradient(#9e57ee, #1eae98);
 }
-.def-block-clr {
-  background-color: #256e25; 
-  border-color: #0a3221;
+.lose-header-clr {
+  background-image: radial-gradient(#83081b, #0c0e0e);
 }
 </style>

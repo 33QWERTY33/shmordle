@@ -77,7 +77,7 @@ export default {
     this.fetchWordData().then(() => {
       setTimeout(() => {
         this.fetchWordDefinition();
-      }, 1000);
+      }, 3000);
     });
   },
   methods: {
@@ -182,8 +182,6 @@ export default {
 .incorrect {background-color: rgb(113, 113, 113);}
 .selected {background-color: #5a5858;}
 .part-speech-clr {color: #5b446a;}
-.word-reveal-clr {color:rgb(60, 92, 93);}
-.def-clr {color: #482a5c;}
 .keyboard {
   background-color: rgb(199, 188, 188);
   color: #482a5c;}
@@ -198,15 +196,5 @@ export default {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 5px;
-}
-.def-block-clr {
-  background-color: #7dd87d; 
-  border-color: #4c9173;
-}
-.win-header-clr {
-  background-image: radial-gradient(#9e57ee, #1eae98);
-}
-.lose-header-clr {
-  background-image: radial-gradient(#83081b, #0c0e0e);
 }
 </style>./LoseScreen.vue
