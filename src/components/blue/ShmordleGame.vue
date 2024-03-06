@@ -78,7 +78,7 @@ export default {
     this.fetchWordData().then(() => {
       setTimeout(() => {
         this.fetchWordDefinition();
-      }, 3000);
+      }, 2000);
     });
   },
   beforeUnmount() {
