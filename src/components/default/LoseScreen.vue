@@ -18,9 +18,11 @@
     </div>
   </div>
   <div v-if="defNotFound">
-      <div>
-        <p class="part-of-speech part-of-speech-clr">Definition</p>
-        <p class="definition def-clr">not found</p>
+      <div class="definitions-block">
+        <div class="individual-definition def-block-clr">
+          <p class="part-of-speech part-of-speech-clr">Definition</p>
+          <p class="definition def-clr">not found</p>
+        </div>
       </div>
     </div>
 </template>
