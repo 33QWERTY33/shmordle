@@ -82,7 +82,7 @@ export default {
   },
   methods: {
     async fetchWordData() {
-      await fetch("https://random-word-api.herokuapp.com/word/?length=" +  + String(this.wordLength))
+      await fetch("https://random-word-api.herokuapp.com/word/?length=" + String(this.wordLength))
         .then((response) => {
           return response.json();
         })
@@ -193,5 +193,15 @@ export default {
 .input-clr {
   color: rgb(144, 94, 137);
   background-color: #c1c5c6;
+}
+.def-block-clr {
+  background-color: #7dd87d; 
+  border-color: #4c9173;
+}
+.win-header-clr {
+  background-image: radial-gradient(#9e57ee, #1eae98);
+}
+.lose-header-clr {
+  background-image: radial-gradient(#83081b, #0c0e0e);
 }
 </style>./LoseScreen.vue

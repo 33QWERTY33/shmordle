@@ -4,6 +4,7 @@ import Shmordle from '../views/DefaultShmordle.vue'
 import BlueShmordle from '../views/BlueShmordle.vue'
 import SixLetters from '../views/SixLetters.vue'
 import FourLetters from '../views/FourLetters.vue'
+import ThreeLetters from '../views/ThreeLetters.vue'
 
 const routes = [
   {
@@ -30,6 +31,11 @@ const routes = [
     path: '/4',
     name: '4',
     component: FourLetters
+  },
+  {
+    path: '/3',
+    name: '3',
+    component: ThreeLetters
   },
 ]
 

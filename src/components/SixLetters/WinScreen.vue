@@ -1,5 +1,5 @@
 <template>
-  <h1>Congratulations! You Won</h1>
+  <h1 class="win-header win-header-clr">Congratulations! You Won</h1>
   <h3 class="word-reveal word-reveal-clr">{{ answer }}</h3>
   <div v-if="showDefDisplay">
     <div
@@ -38,7 +38,7 @@ export default {
 </script>
 
 <style scoped>
-h1 {
+.win-header {
   color: transparent;
   font-size: 80px;
   font-weight: 600;

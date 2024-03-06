@@ -62,11 +62,11 @@ export default {
       alpha: require("../../assets/characters.json").data,
       rawAlpha: 'abcdefghijklmnopqrstuvwxyz',
       row_coords: [0, 1, 2, 3, 4, 5],
-      col_coords: [0, 1, 2, 3, 4, 5],
+      col_coords: [0, 1, 2],
       keyboard_coords: [[0, 9], [9, 18], [18, 26]],
       definitionUrl: "https://api.dictionaryapi.dev/api/v2/entries/en/",
       wordDef: null,
-      wordLength: 6,
+      wordLength: 3,
       greenFlag: false,
       yellowFlag: false,
       bgColors: require("../../assets/bg_colors.json")
@@ -176,7 +176,7 @@ export default {
   },
 };
 </script>
-<style>
+<style scoped>
 .correct_char_and_place {background-color: rgb(29, 228, 29);}
 .correct_char {background-color: rgb(253, 253, 1);}
 .incorrect {background-color: rgb(113, 113, 113);}
@@ -196,7 +196,7 @@ export default {
 }
 .Row {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 5px;
 }
 .def-block-clr {

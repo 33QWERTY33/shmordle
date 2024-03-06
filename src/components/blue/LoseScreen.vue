@@ -1,5 +1,5 @@
 <template>
-  <h1>You lose! >:(</h1>
+  <h1 class="lose-header lose-header-color">You lose! >:(</h1>
   <h3 class="word-reveal word-reveal-clr">{{ answer }}</h3>
   <div v-if="showDefDisplay">
     <div
@@ -36,18 +36,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-h1 {
-  color: transparent;
-  font-size: 80px;
-  font-weight: 600;
-  background-image: radial-gradient(#83081b, #0c0e0e);
-  background-clip: text;
-  -webkit-background-clip: text;
-}
-.def-block-clr {
-  background-color: #7dd87d; 
-  border-color: #4c9173;
-}
-</style>

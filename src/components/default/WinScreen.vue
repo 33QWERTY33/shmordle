@@ -1,5 +1,5 @@
 <template>
-  <h1>Congratulations! You Won</h1>
+  <h1 class="win-header win-header-clr">Congratulations! You Won</h1>
   <h3 class="word-reveal word-reveal-clr">{{ answer }}</h3>
   <div v-if="showDefDisplay">
     <div
@@ -36,18 +36,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-h1 {
-  color: transparent;
-  font-size: 80px;
-  font-weight: 600;
-  background-clip: text;
-  -webkit-background-clip: text;
-  background-image: radial-gradient(#9e57ee, #1eae98);
-}
-.def-block-clr {
-  background-color: #256e25; 
-  border-color: #0a3221;
-}
-</style>

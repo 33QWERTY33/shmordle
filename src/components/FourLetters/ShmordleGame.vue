@@ -73,7 +73,6 @@ export default {
     };
   },
   created() {
-    console.log(this.guesses)
     document.body.style.backgroundColor = this.bgColors[window.location.pathname]
     this.fetchWordData().then(() => {
       setTimeout(() => {
@@ -197,7 +196,17 @@ export default {
 }
 .Row {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-gap: 5px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 3px;
+}
+.def-block-clr {
+  background-color: #7dd87d; 
+  border-color: #4c9173;
+}
+.win-header-clr {
+  background-image: radial-gradient(#9e57ee, #1eae98);
+}
+.lose-header-clr {
+  background-image: radial-gradient(#83081b, #0c0e0e);
 }
 </style>./LoseScreen.vue

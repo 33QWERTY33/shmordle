@@ -36,18 +36,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-h1 {
-  color: transparent;
-  font-size: 80px;
-  font-weight: 600;
-  background-clip: text;
-  -webkit-background-clip: text;
-  background-image: radial-gradient(#83081b, #0c0e0e);
-}
-.def-block-clr {
-  background-color: #7dd87d; 
-  border-color: #4c9173;
-}
-</style>
