@@ -80,6 +80,9 @@ export default {
       }, 3000);
     });
   },
+  beforeUnmount() {
+    window.location.reload()
+  },
   methods: {
     async fetchWordData() {
       await fetch("https://random-word-api.herokuapp.com/word/?length=" + String(this.wordLength))

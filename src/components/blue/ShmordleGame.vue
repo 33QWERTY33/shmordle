@@ -43,6 +43,7 @@
 <script>
 import WinScreen from "./WinScreen.vue";
 import LoseScreen from "./LoseScreen.vue";
+import { onBeforeMount } from "vue";
 
 export default {
   components: {
@@ -69,7 +70,7 @@ export default {
       wordLength: 5,
       greenFlag: false,
       yellowFlag: false,
-      bgColors: require("../../assets/bg_colors.json")
+      bgColors: require("../../assets/bg_colors.json"),
     };
   },
   created() {
@@ -79,6 +80,9 @@ export default {
         this.fetchWordDefinition();
       }, 3000);
     });
+  },
+  beforeUnmount() {
+    window.location.reload()
   },
   methods: {
     async fetchWordData() {
