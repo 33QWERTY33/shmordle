@@ -32,7 +32,7 @@ export default {
   props: ["answer", "def"],
   data() {
     return {
-      defNotFound: false  
+      defNotFound: false
     }
   },
   computed: {
@@ -52,12 +52,15 @@ export default {
 </script>
 
 <style scoped>
-.def-clr {color:  #1a2639;}
-.word-reveal-clr {color:#005689;}
-.part-of-speech-clr {color: #3e4a61;}
+.def-clr {color: #482a5c;}
+.word-reveal-clr {color:rgb(60, 92, 93);}
+.part-of-speech-clr {color: #5b446a;}
 .def-block-clr {
-  background-color: #d9dad7; 
-  border-color: #3e4a61;
+  background-color: #7dd87d; 
+  border-color: #4c9173;
+}
+.win-header-clr {
+  background-image: radial-gradient(#9e57ee, #1eae98);
 }
 .lose-header-clr {
   background-image: radial-gradient(#83081b, #0c0e0e);

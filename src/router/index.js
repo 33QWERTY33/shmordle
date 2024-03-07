@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import Shmordle from '../views/DefaultShmordle.vue'
 import BlueShmordle from '../views/BlueShmordle.vue'
+import PinkShmordle from '../views/PinkShmordle.vue'
 import SixLetters from '../views/SixLetters.vue'
 import FourLetters from '../views/FourLetters.vue'
 import ThreeLetters from '../views/ThreeLetters.vue'
@@ -21,6 +22,11 @@ const routes = [
     path: '/blue',
     name: 'blue',
     component: BlueShmordle
+  },
+  {
+    path: '/pink',
+    name: 'pink',
+    component: PinkShmordle
   },
   {
     path: '/6',

@@ -189,7 +189,7 @@ export default {
   color: #482a5c;}
 .block-clr {
   color:rgb(102, 93, 102);
-  border-color:#482a5c}
+  border-color:#482a5c;}
 .input-clr {
   color: rgb(144, 94, 137);
   background-color: #c1c5c6;

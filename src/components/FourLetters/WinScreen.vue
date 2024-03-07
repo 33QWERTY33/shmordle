@@ -52,17 +52,14 @@ export default {
 </script>
 
 <style scoped>
-.def-clr {color: #482a5c;}
-.word-reveal-clr {color:rgb(60, 92, 93);}
-.part-speech-clr {color: #5b446a;}
+.def-clr {color: #945804;}
+.word-reveal-clr {color:rgb(204, 147, 2);}
+.part-of-speech-clr {color: #e0ba14;}
 .def-block-clr {
-  background-color: #7dd87d; 
-  border-color: #4c9173;
+  background-color: #ae9eba; 
+  border-color: #543bc2;
 }
 .win-header-clr {
   background-image: radial-gradient(#9e57ee, #1eae98);
-}
-.lose-header-clr {
-  background-image: radial-gradient(#83081b, #0c0e0e);
 }
 </style>

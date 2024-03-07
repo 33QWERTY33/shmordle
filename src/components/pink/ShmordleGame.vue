@@ -43,6 +43,7 @@
 <script>
 import WinScreen from "./WinScreen.vue";
 import LoseScreen from "./LoseScreen.vue";
+import { onBeforeMount } from "vue";
 
 export default {
   components: {
@@ -62,14 +63,14 @@ export default {
       alpha: require("../../assets/characters.json").data,
       rawAlpha: 'abcdefghijklmnopqrstuvwxyz',
       row_coords: [0, 1, 2, 3, 4, 5],
-      col_coords: [0, 1, 2],
+      col_coords: [0, 1, 2, 3, 4],
       keyboard_coords: [[0, 9], [9, 18], [18, 26]],
       definitionUrl: "https://api.dictionaryapi.dev/api/v2/entries/en/",
       wordDef: null,
-      wordLength: 3,
+      wordLength: 5,
       greenFlag: false,
       yellowFlag: false,
-      bgColors: require("../../assets/bg_colors.json")
+      bgColors: require("../../assets/bg_colors.json"),
     };
   },
   created() {
@@ -85,7 +86,7 @@ export default {
   },
   methods: {
     async fetchWordData() {
-      await fetch("https://random-word-api.herokuapp.com/word/?length=" + String(this.wordLength))
+      await fetch("https://random-word-api.herokuapp.com/word/?length="  + String(this.wordLength))
         .then((response) => {
           return response.json();
         })
@@ -180,24 +181,19 @@ export default {
 };
 </script>
 <style scoped>
-.correct_char_and_place {background-color: rgb(29, 228, 29);}
-.correct_char {background-color: rgb(253, 253, 1);}
-.incorrect {background-color: rgb(113, 113, 113);}
-.selected {background-color: #5a5858;}
-.part-speech-clr {color: #5b446a;}
+.correct_char_and_place {background-color:  #ffd48b;}
+.correct_char {background-color: #9896f1;}
+.incorrect {background-color: #5585b5;}
+.selected {background-color: #58595a;}
 .keyboard {
-  background-color: rgb(199, 188, 188);
-  color: #482a5c;}
-.block-clr {
-  color:rgb(102, 93, 102);
-  border-color:#482a5c;}
-.input-clr {
-  color: rgb(144, 94, 137);
-  background-color: #c1c5c6;
+  color:#d59bf6;
+  background-color: #ffdcf5;
 }
-.Row {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 5px;
+.block-clr {
+  color:rgb(102, 93, 101);
+  border-color:#164631;}
+.input-clr {
+  color: #fdffcd ;
+  background-color: #9896f1;
 }
 </style>./LoseScreen.vue

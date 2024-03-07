@@ -43,7 +43,6 @@
 <script>
 import WinScreen from "./WinScreen.vue";
 import LoseScreen from "./LoseScreen.vue";
-import { onBeforeMount } from "vue";
 
 export default {
   components: {

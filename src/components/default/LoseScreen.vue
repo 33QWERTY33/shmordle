@@ -18,8 +18,8 @@
     </div>
   </div>
   <div v-if="defNotFound">
-      <div class="definitions-block">
-        <div class="individual-definition def-block-clr">
+      <div class="individual-definition def-block-clr">
+        <div class="">
           <p class="part-of-speech part-of-speech-clr">Definition</p>
           <p class="definition def-clr">not found</p>
         </div>
@@ -54,7 +54,7 @@ export default {
 <style scoped>
 .def-clr {color: #482a5c;}
 .word-reveal-clr {color:rgb(60, 92, 93);}
-.part-speech-clr {color: #5b446a;}
+.part-of-speech-clr {color: #5b446a;}
 .def-block-clr {
   background-color: #7dd87d; 
   border-color: #4c9173;

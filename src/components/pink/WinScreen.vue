@@ -1,5 +1,5 @@
 <template>
-  <h1 class="lose-header lose-header-clr">You lose! >:(</h1>
+  <h1 class="win-header win-header-clr">Congratulations! You Won</h1>
   <h3 class="word-reveal word-reveal-clr">{{ answer }}</h3>
   <div v-if="showDefDisplay">
     <div
@@ -32,7 +32,7 @@ export default {
   props: ["answer", "def"],
   data() {
     return {
-      defNotFound: false  
+      defNotFound: false
     }
   },
   computed: {
@@ -43,7 +43,7 @@ export default {
       try {
         return this.def[0].meanings;
       } catch {
-        this.defNotFound = true;
+        this.defNotFound = true
         return [];
       }
     },
@@ -52,12 +52,15 @@ export default {
 </script>
 
 <style scoped>
-.def-clr {color:  #1a2639;}
-.word-reveal-clr {color:#005689;}
-.part-of-speech-clr {color: #3e4a61;}
+.def-clr {color: #482a5c;}
+.word-reveal-clr {color:#702283;}
+.part-of-speech-clr {color: #5b446a;}
 .def-block-clr {
-  background-color: #d9dad7; 
-  border-color: #3e4a61;
+  background-color: #7dd87d; 
+  border-color: #4c9173;
+}
+.win-header-clr {
+  background-image: radial-gradient(#9e57ee, #1eae98);
 }
 .lose-header-clr {
   background-image: radial-gradient(#83081b, #0c0e0e);
