@@ -168,7 +168,7 @@ export default {
           this.greenFlag = !this.greenFlag;
           break
         } else if (this.yellowFlag) {
-          this.alpha[idx].currentState.yellow = true;
+          this.alpha[idx].currentState.yellow = this.alpha[idx].currentState.green ? false : true;
           this.yellowFlag = !this.yellowFlag;
           break
         } else {
