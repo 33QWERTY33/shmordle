@@ -92,7 +92,8 @@ export default {
         })
         .then((data) => {
           this.word = String(data[0]);
-        });
+        })
+        .catch(() => {this.word = "error"})
     },
     async fetchWordDefinition() {
       const url = this.definitionUrl + this.word;
